@@ -22,52 +22,50 @@ public class MyCircle {
     }
 
     public void setRadius(int radius) {
-        this.radius=radius;
+        this.radius = radius;
     }
 
     public MyPoint getCenter() {
-        return center;
+        return this.center;
     }
     public void setCenter(MyPoint center) {
-        this.center.setX(x);
-    }
+        this.center = center;
 
-    public void setCenterX(int x) {
-        this.center.getY() = center.getX();
-    }
+
 
     public int getCenterX() {
         return center.getX();
     }
+    public void setCenterX(int x) {
+        center.setX(x);
+        }
     public int getCenterY(){
         return center.getY();
     }
     public void setCenterY(int y) {
-        this.center.getY() = center.getY();
+       center.setY(y);
     }
 
     public int[] getCenterXY() {
-        int[] results = new int[2];
-        results[0] = this.center.getX();
-        results[0] = this.center.getY();
-        return results;
+        return center.getXY();
 
     }
     public void setCenterXY(int x, int y) {
-        this.center.getX()= center.getX();
-        this.center.getY()= center.getY();
+        center.setXY(x,y);
     }
     public String toString(){
-        return radius + "," + center;
+        return "Circle[cnter=" + center + ", radius= " + radius + "]";
     }
     public double getArea() {
         return radius*radius*Math.PI;
     }
     public double getCircumference(){
-        return 4*radius*Math.PI;
+        return 2.0*radius*Math.PI;
 
     }
     public double distance(MyCircle another) {
         return center.distance(another.center);
     }
 }
+
+
