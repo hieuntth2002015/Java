@@ -14,7 +14,7 @@ public class Circle {
     }
     public Circle(double radius, String color) {
         this.radius = radius;
-        this.color = "red"
+        this.color = "red";
     }
 
     public double getRadius() {
